@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+	function move(cmd){
+		var url = "http://turtleserver:3001/cmd?action=" + cmd;
+		$.get(url, function(response){});
+	}
+</script>
+<body>
+
+<h1>Robot control</h1>
+
+<button type="button" onclick='move("right")'> Turn Right </button>
+<button type="button" onclick='move("left")'> Turn Left </button>
+<button type="button" onclick='move("forward")'>Forward</button>
+<button type="button" onclick='move("backward")'>Backward </button>
+<button type="button" onclick='move("lright")'> Little Right </button>
+<button type="button" onclick='move("lleft")'> Little Left </button>
+<button type="button" onclick='move("stop")'>Stop </button>
+
+</body>
+</html>
+
